@@ -71,7 +71,8 @@ PRODUCT_COPY_FILES += \
 # whitelisted app
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml \
-    $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:system/etc/permissions/privapp-permissions-qti.xml
+    $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:system/etc/permissions/privapp-permissions-qti.xml \
+    $(LOCAL_PATH)/configs/telephony_product_privapp-permissions-qti.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/telephony_product_privapp-permissions-qti.xml
 
 # Additional native libraries
 PRODUCT_COPY_FILES += \
@@ -241,6 +242,8 @@ PRODUCT_COPY_FILES += \
 # IMS
 PRODUCT_PACKAGES += \
     com.android.ims.rcsmanager
+    ims-ext-common \
+    ims_ext_common.xml
 
 # Init scripts ramdisk
 PRODUCT_PACKAGES += \
@@ -394,16 +397,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SOONG_NAMESPACES += \
     device/xiaomi/land
 
-# Telephony
-PRODUCT_PACKAGES += \
-    ims-ext-common \
-    ims_ext_common.xml
+# Radio
 
 PRODUCT_PACKAGES += \
     qti-telephony-hidl-wrapper \
-    qti_telephony_hidl_wrapper.xml
-
-PRODUCT_PACKAGES += \
+    qti_telephony_hidl_wrapper.xml \
     qti-telephony-utils \
     qti_telephony_utils.xml
 
