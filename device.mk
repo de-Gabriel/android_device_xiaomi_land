@@ -341,6 +341,10 @@ PRODUCT_PACKAGES += \
 #Properties
 -include $(LOCAL_PATH)/vendor_prop.mk
 
+# Qcom
+PRODUCT_BOARD_PLATFORM := msm8937
+PRODUCT_USES_QCOM_HARDWARE := true
+
 # RCS
 PRODUCT_PACKAGES += \
     rcs_service_aidl \
