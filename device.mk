@@ -354,11 +354,6 @@ PRODUCT_PACKAGES += \
 
 #Properties
 -include $(LOCAL_PATH)/vendor_prop.mk
-
-# Qcom
-PRODUCT_BOARD_PLATFORM := msm8937
-PRODUCT_USES_QCOM_HARDWARE := true
-
 # -include vendor/qcom/common/av/qti-av.mk
 # -include vendor/qcom/common/bt/qti-bt.mk
 # -include vendor/qcom/common/perf/qti-perf.mk
