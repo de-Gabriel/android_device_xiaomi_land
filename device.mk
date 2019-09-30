@@ -395,6 +395,7 @@ PRODUCT_SOONG_NAMESPACES += \
 # Telephony
 PRODUCT_PACKAGES += \
     ims-ext-common \
+    ims_ext_common.xml
 
 PRODUCT_PACKAGES += \
     qti-telephony-hidl-wrapper \
