@@ -2,6 +2,7 @@
 # Copyright (C) 2016 The CyanogenMod Project
 # Copyright (C) 2017 The XPerience Project
 # Copyright (C) 2017-2018 The LineageOS Project
+# Copyright (C) 2019 The Paranoid Android Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -220,7 +221,7 @@ TARGET_PER_MGR_ENABLED := true
 
 # RIL
 DISABLE_RILD_OEM_HOOK := true
-TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
+#TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 TARGET_USES_OLD_MNC_FORMAT := true
 
 # Recovery
