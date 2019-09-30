@@ -232,7 +232,7 @@ TARGET_RECOVERY_FSTAB 		 := $(DEVICE_PATH)/rootdir/fstab.qcom
 
 # SELinux
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy-th
-include device/qcom/sepolicy/sepolicy.mk
+#include device/qcom/sepolicy/sepolicy.mk
 #BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 
 #Treble
