@@ -396,6 +396,10 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_PACKAGES += \
     ims-ext-common \
 
+PRODUCT_PACKAGES += \
+    qti-telephony-hidl-wrapper \
+    qti_telephony_hidl_wrapper.xml
+
 # TextClassifier
 PRODUCT_PACKAGES += \
     textclassifier.bundle1
