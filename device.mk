@@ -19,6 +19,9 @@
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
 
+# Utils
+-include device/qcom/common/utils.mk
+
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1280
 TARGET_SCREEN_WIDTH := 720
@@ -349,6 +352,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOARD_PLATFORM := msm8937
 PRODUCT_USES_QCOM_HARDWARE := true
 
+# -include vendor/qcom/common/av/qti-av.mk
+# -include vendor/qcom/common/bt/qti-bt.mk
+# -include vendor/qcom/common/perf/qti-perf.mk
+
 # RCS
 PRODUCT_PACKAGES += \
     rcs_service_aidl \
@@ -388,10 +395,6 @@ PRODUCT_SOONG_NAMESPACES += \
 # Telephony
 PRODUCT_PACKAGES += \
     ims-ext-common \
-    telephony-ext
-
-PRODUCT_BOOT_JARS += \
-    telephony-ext
 
 # TextClassifier
 PRODUCT_PACKAGES += \
