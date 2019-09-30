@@ -400,6 +400,10 @@ PRODUCT_PACKAGES += \
     qti-telephony-hidl-wrapper \
     qti_telephony_hidl_wrapper.xml
 
+PRODUCT_PACKAGES += \
+    qti-telephony-utils \
+    qti_telephony_utils.xml
+
 # TextClassifier
 PRODUCT_PACKAGES += \
     textclassifier.bundle1
