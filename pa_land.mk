@@ -15,13 +15,21 @@
 # limitations under the License.
 #
 
+# Check for target product
+ifeq (pa_land,$(TARGET_PRODUCT))
+
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_m.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
-# Inherit some common POSP stuff
-$(call inherit-product, vendor/potato/config/common_full_phone.mk)
+# Include Paranoid Android common configuration
+TARGET_BOOT_ANIMATION_RES := 1080
+
+TARGET_USES_AOSP := false
+TARGET_USES_QCOM_BSP := false
+
+include device/qcom/common/common.mk
+include vendor/pa/config/common_full_phone.mk
 
 # Inherit from land device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
@@ -30,7 +38,7 @@ PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi 3S
 PRODUCT_DEVICE := land
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_NAME := potato_land
+PRODUCT_NAME := pa_land
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
@@ -40,3 +48,5 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="land-user 6.0.1 MMB29M V9.6.1.0.MALMIFD release-keys"
 
 BUILD_FINGERPRINT := Xiaomi/land/land:6.0.1/MMB29M/V9.6.1.0.MALMIFD:user/release-keys
+
+endif
