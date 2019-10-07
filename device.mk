@@ -241,7 +241,7 @@ PRODUCT_COPY_FILES += \
 
 # IMS
 PRODUCT_PACKAGES += \
-    com.android.ims.rcsmanager
+    com.android.ims.rcsmanager \
     ims-ext-common \
     ims_ext_common.xml
 
