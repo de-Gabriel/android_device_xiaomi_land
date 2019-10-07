@@ -621,6 +621,9 @@ vendor/lib64/libqmi_csi.so
 vendor/lib64/libqmi_encdec.so
 vendor/lib64/libqmiservices.so
 
+# Radio - from mata QP1A.190711.107
+-priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|956a4017d0ba7f68e6d225e57b40d3b2bcbb4837
+
 # Radio - from Panther
 -app/QtiTelephonyService/QtiTelephonyService.apk
 etc/permissions/lpa.xml
@@ -631,7 +634,6 @@ etc/permissions/qcrilhook.xml
 -framework/qcrilhook.jar
 -framework/uimlpalibrary.jar
 -framework/uimremotesimlocklibrary.jar
--priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 vendor/bin/hw/qcrild
 vendor/bin/ATFWD-daemon
 vendor/bin/ipacm-diag
